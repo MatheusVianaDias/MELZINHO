@@ -106,7 +106,13 @@
     }
 
     #estado:hover,
-    #estado:focus{
+    #estado:focus,
+    #cpf_cnpj:hover,
+    #cpf_cnpj:focus,
+    #sabores:hover,
+    #sabores:focus,
+    #quantidades:hover,
+    #quantidades:focus {
         outline: none;
         border-color: #09d;
         box-shadow: 0 0 0 3px #4dc8ff;
@@ -147,13 +153,15 @@
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
 
-            <label for="estado">CPF ou CNPJ</label>
-            <select name="estado" id="estado">
-                <option value="">CPF</option>
-                <option value="">CNPJ</option>
-
+            <label for="cpf_cnpj">CPF ou CNPJ</label>
+            <select id="cpf_cnpj" name="cpf_cnpj">
+                <option selected disabled value="">CPF OU CNPJ</option>
+                <option value="CPF">CPF</option>
+                <option value="CNPJ">CNPJ</option>
             </select>
-            <input type="number" name="CPF" id="message" placeholder="Digite seu CPF ou CNPJ" required>
+
+            <label for="numero"></label>
+            <input type="number" name="numero" id="numero" placeholder="Digite o CPF ou CNPJ" required>
 
             <label for="rg">RG</label>
             <input type="number" name="rg" id="rg" placeholder="Digite seu RG" required>
@@ -183,49 +191,70 @@
             <input type="number" name="cep" id="cep" placeholder="Digite o CEP" required>
 
 
-            <label for="estado">Estado</label>
-            <select id="estado" name="estado">
-                <option value="AC">(AC) Acre</option>
-                <option value="AL">(AL) Alagoas</option>
-                <option value="AP">(AP) Amapá</option>
-                <option value="AM">(AM) Amazonas</option>
-                <option value="BA">(BA) Bahia</option>
-                <option value="CE">(CE) Ceará</option>
-                <option value="DF">(DF) Distrito Federal</option>
-                <option value="ES">(ES) Espírito Santo</option>
-                <option value="GO">(GO) Goiás</option>
-                <option value="MA">(MA) Maranhão</option>
-                <option value="MT">(MT) Mato Grosso</option>
-                <option value="MS">(MS) Mato Grosso do Sul</option>
-                <option value="MG">(MG) Minas Gerais</option>
-                <option value="PA">(PA) Pará</option>
-                <option value="PB">(PB) Paraíba</option>
-                <option value="PR">(PR) Paraná</option>
-                <option value="PE">(PE) Pernambuco</option>
-                <option value="PI">(PI) Piauí</option>
-                <option value="RJ">(RJ) Rio de Janeiro</option>
-                <option value="RN">(RN) Rio Grande do Norte</option>
-                <option value="RS">(RS) Rio Grande do Sul</option>
-                <option value="RO">(RO) Rondônia</option>
-                <option value="RR">(RR) Roraima</option>
-                <option value="SC">(SC) Santa Catarina</option>
-                <option value="SP">(SP) São Paulo</option>
-                <option value="SE">(SE) Sergipe</option>
-                <option value="TO">(TO) Tocantins</option>
-                <option value="EX">(EX) Estrangeiro</option>
-            </select>
-            
             <label for="cidade">Cidade</label>
             <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade" required>
 
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado">
+                <option selected disabled value="">Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+            </select>
+
+
+            <label for="sabores">Sabores</label>
+            <select id="sabores" name="sabores">
+                <option selected disabled value="">Sabores</option>
+                <option value="código 131">Sabor: Eucalipto Copaíba (código 131)</option>
+                <option value="código 001">Sabor: Geleia Real (código 001)</option>
+                <option value="código 006">Sabor: Alho / Eucalipto (código 006)</option>
+                <option value="código 002">Sabor: Eucalipto (código 002)</option>
+                <option value="código 021">Sabor: Abacaxi/Hortelã (código 021)</option>
+                <option value="código 068">Sabor: Açaí e Guaraná (código 068)</option>
+                <option value="código 007">Sabor: Acerola (código 007)</option>
+                <option value="código 008">Sabor: Amendoim (código 008)</option>
+                <option value="código 005">Sabor: Limão (código 005)</option>
+                <option value="código 004">Sabor: Romã/Gengibre (código 004)</option>
+            </select>
+
+            <label for="quantidades">Quantidade</label>
+            <select id="quantidades" name="quantidades">
+                <option selected disabled value="">Quantidades</option>
+                <option value="1 Caixa">1 Caixa</option>
+                <option value="2 Caixas">2 Caixa</option>
+                <option value="3 Caixas">3 Caixa</option>
+                <option value="4 Caixas">4 Caixa </option>
+
+            </select>
 
 
 
-
-
-            <label for="mensagem">Escreva os produtos que deseja</label>
-            <textarea name="mensagem" placeholder="Escreva seus produtos" required id="mensagem" cols="30"
-                rows="10"></textarea>
 
             <input type="hidden" name="_captcha" value="false" id="">
             <input type="hidden" name="_next" value="https://matheusvianadias.github.io/MELZINHO/obrigado.html"
