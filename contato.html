@@ -105,6 +105,16 @@
         box-shadow: 0 0 0 3px #4dc8ff;
     }
 
+    #estado:hover,
+    #estado:focus,
+    #CPF:hover,
+    #CPF:focus {
+        outline: none;
+        border-color: #09d;
+        box-shadow: 0 0 0 3px #4dc8ff;
+        transition: border-color, box-shadow 0.4s;
+    }
+
     div button {
         display: block;
         padding: 1rem;
@@ -141,6 +151,7 @@
 
             <label for="CPF">CPF ou CNPJ</label>
             <select name="CPF" id="CPF">
+                <option selected disabled value="" >Select</option>
                 <option value="">CPF</option>
                 <option value="">CNPJ</option>
 
@@ -210,14 +221,27 @@
             <label for="cidade">Cidade</label>
             <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade" required>
 
+            <label for="mel">Caixa Apimel (32 unid)</label>
+            <select name="mel" id="mel" required>
+                <option selected disabled value="" >Sabores</option>
+                <option value="">Sabor: Eucalipto Copaíba (código 131)</option>
+                <option value="">Sabor: Geleia Real (código 001)</option>
+                <option value="">Sabor: Alho / Eucalipto (código 006)</option>
+                <option value="">Sabor: Eucalipto (código 002)</option>
+                <option value="">Sabor: Abacaxi/Hortelã (código 021)</option>
+                <option value="">Sabor: Açaí e Guaraná (código 068)</option>
+                <option value="">Sabor: Acerola (código 007)</option>
+                <option value="">Sabor: Amendoim (código 008)</option>
+                <option value="">Sabor: Limão (código 005)</option>
+                <option value="">Sabor: Romã/Gengibre (código 004)</option>
+
+            </select>
+            
 
 
 
 
-
-            <label for="mensagem">Escreva os produtos que deseja</label>
-            <textarea name="mensagem" placeholder="Escreva seus produtos" required id="mensagem" cols="30"
-                rows="10"></textarea>
+            
 
             <input type="hidden" name="_captcha" value="false" id="">
             <input type="hidden" name="_next" value="https://matheusvianadias.github.io/MELZINHO/obrigado.html"
