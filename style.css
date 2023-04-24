@@ -34,7 +34,7 @@ html {
     align-items: center;
     background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(163, 112, 0));
     position: fixed;
-    padding-left: 30rem;
+    padding-left: 15rem;
 }
 
 .logo {
@@ -454,6 +454,36 @@ footer {
 
 }
 
+#link-topo {
+
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 166, 0, 0.37);
+    padding: 13px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 7px rgb(214, 212, 212);
+}
+
+#link-topo:hover,
+#link-topo:focus {
+        outline: none;
+        width: 15x;
+    background-color: orange;
+        transition: 0.4s;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: orange;
+    
+}
 
 @media (max-width: 720px) {
     .conteudo-principal h1 {
@@ -516,3 +546,5 @@ footer {
 
     
 }
+
+
